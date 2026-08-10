@@ -1,10 +1,17 @@
+// Werk de datum van een pagina bij wanneer de inhoud écht wijzigt.
+const lastModified = {
+  "": "2026-08-10",
+  "/over-ons": "2026-08-10",
+  "/product": "2026-08-10",
+  "/contact": "2026-08-10",
+};
+
 export default function sitemap() {
   const base = "https://mjoyit.com";
-  const routes = ["", "/over-ons", "/product", "/contact"].map((path) => ({
+  return Object.entries(lastModified).map(([path, date]) => ({
     url: `${base}${path}`,
-    lastModified: new Date(),
+    lastModified: new Date(date),
     changeFrequency: "monthly",
     priority: path === "" ? 1 : 0.7,
   }));
-  return routes;
 }

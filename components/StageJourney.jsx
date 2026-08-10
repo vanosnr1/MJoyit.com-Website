@@ -7,21 +7,21 @@ const stages = [
     label: "Jonge carrière",
     cx: 90,
     cy: 115,
-    color: "#4F7CFF",
+    color: "rgb(var(--c-signal))",
     text: "Weinig tijd, veel te regelen. Apps die dingen sneller maken, niet ingewikkelder.",
   },
   {
     label: "Groeiend gezin",
     cx: 400,
     cy: 88,
-    color: "#22D3AE",
+    color: "rgb(var(--c-current))",
     text: "Zorg, planning en afspraken delen met anderen — zonder chaos in appjes en agenda's.",
   },
   {
     label: "Latere jaren",
     cx: 720,
     cy: 34,
-    color: "#F2F4F7",
+    color: "rgb(var(--c-paper))",
     text: "Rust en overzicht, ook als het leven er anders uitziet dan tien jaar geleden.",
   },
 ];
@@ -58,7 +58,7 @@ export default function StageJourney({ className = "" }) {
               cy={s.cy}
               r={active === i ? 6 : 4}
               fill={s.color}
-              stroke={active === i ? "#0B0F16" : "none"}
+              stroke={active === i ? "rgb(var(--c-ink))" : "none"}
               strokeWidth="2"
               className="cursor-pointer transition-all duration-300"
               tabIndex={0}
@@ -81,9 +81,9 @@ export default function StageJourney({ className = "" }) {
             y2="0"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stopColor="#4F7CFF" />
-            <stop offset="0.5" stopColor="#22D3AE" />
-            <stop offset="1" stopColor="#F2F4F7" />
+            <stop offset="0" stopColor="rgb(var(--c-signal))" />
+            <stop offset="0.5" stopColor="rgb(var(--c-current))" />
+            <stop offset="1" stopColor="rgb(var(--c-paper))" />
           </linearGradient>
         </defs>
       </svg>

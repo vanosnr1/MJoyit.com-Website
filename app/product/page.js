@@ -1,15 +1,14 @@
 import PhoneShowcase from "../../components/PhoneShowcase";
 
 export const metadata = {
-  title: "Harmoneaz — co-ouderschap app voor Nederland",
+  title: "Harmoneaz — de eerste app van MJoy-IT",
   description:
-    "Harmoneaz is de co-ouderschap app die MJoy-IT vanuit eigen ervaring ontwikkelde, speciaal voor de Nederlandse situatie. Zorgschema, agenda en afspraken op één rustige plek. 14 dagen gratis proberen.",
+    "Ontdek Harmoneaz, de eerste app van MJoy-IT: vanuit eigen ervaring ontwikkeld voor co-ouders in Nederland. Lees het verhaal achter de app en probeer 'm via harmoneaz.com.",
   keywords: [
-    "co-ouderschap app",
-    "co-ouderschap app Nederland",
-    "zorgschema app",
-    "ouderschapsplan app",
     "Harmoneaz",
+    "MJoy-IT apps",
+    "app achter Harmoneaz",
+    "co-ouderschap app Nederland",
   ],
   alternates: { canonical: "/product" },
 };
@@ -65,12 +64,17 @@ const features = [
 const softwareAppJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://harmoneaz.com/#app",
   name: "Harmoneaz",
   applicationCategory: "LifestyleApplication",
   operatingSystem: "iOS, Android",
   description:
     "Co-ouderschap app voor Nederland: plan zorgschema's, agenda's en afspraken rondom de kinderen op één rustige plek.",
   url: "https://harmoneaz.com",
+  sameAs: [
+    "https://apps.apple.com/nl/app/harmoneaz/id6760933859",
+    "https://play.google.com/store/apps/details?id=com.harmoneaz.app",
+  ],
   offers: {
     "@type": "Offer",
     price: "0",
@@ -79,6 +83,7 @@ const softwareAppJsonLd = {
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://mjoyit.com/#organization",
     name: "MJoy-IT",
     url: "https://mjoyit.com",
   },
@@ -104,6 +109,16 @@ export default function Product() {
             Plan zorgschema&apos;s, agenda&apos;s, afspraken en alles rondom
             de kinderen op één rustige plek — zonder eindeloze appjes, losse
             notities of verwarring tussen ouders.
+          </p>
+          <p className="mt-4 text-sm text-fog">
+            Alles over de app zelf vind je op{" "}
+            <a
+              href="https://harmoneaz.com"
+              className="focus-ring rounded-sm font-medium text-signal underline underline-offset-4 hover:text-current"
+            >
+              harmoneaz.com
+            </a>
+            .
           </p>
         </div>
         <PhoneShowcase />

@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#0B0F16",       // near-black background
-        panel: "#131A24",     // raised surface
-        panel2: "#1B2430",    // deeper raised surface
-        line: "#26313F",      // hairline borders
-        fog: "#8A94A3",       // muted text
-        paper: "#F2F4F7",     // primary text on dark
-        signal: "#4F7CFF",    // primary accent — electric blue
-        current: "#22D3AE",   // secondary accent — teal, used sparingly
+        ink: "rgb(var(--c-ink) / <alpha-value>)",         // page background
+        panel: "rgb(var(--c-panel) / <alpha-value>)",     // raised surface
+        panel2: "rgb(var(--c-panel2) / <alpha-value>)",   // deeper raised surface
+        line: "rgb(var(--c-line) / <alpha-value>)",       // hairline borders
+        fog: "rgb(var(--c-fog) / <alpha-value>)",         // muted text
+        paper: "rgb(var(--c-paper) / <alpha-value>)",     // primary text
+        signal: "rgb(var(--c-signal) / <alpha-value>)",   // primary accent — blue
+        current: "rgb(var(--c-current) / <alpha-value>)", // secondary accent — teal
       },
       fontFamily: {
         display: ["var(--font-display)"],
@@ -22,7 +22,8 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       backgroundImage: {
-        "stage-wave": "linear-gradient(90deg, #4F7CFF 0%, #4F7CFF 33%, #22D3AE 66%, #F2F4F7 100%)",
+        "stage-wave":
+          "linear-gradient(90deg, rgb(var(--c-signal)) 0%, rgb(var(--c-signal)) 33%, rgb(var(--c-current)) 66%, rgb(var(--c-paper)) 100%)",
       },
     },
   },
