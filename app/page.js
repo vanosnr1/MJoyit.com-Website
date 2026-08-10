@@ -72,7 +72,7 @@ export default function Home() {
                 gratis proberen.
               </p>
               <Link
-                href="/product"
+                href="/apps/harmoneaz"
                 className="focus-ring mt-2 inline-block rounded-md border border-line px-5 py-2.5 font-mono text-sm text-paper hover:border-current"
               >
                 Lees het volledige verhaal →

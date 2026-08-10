@@ -29,8 +29,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/product" className="focus-ring hover:text-current">
-                  Product
+                <Link href="/apps" className="focus-ring hover:text-current">
+                  Apps
                 </Link>
               </li>
               <li>

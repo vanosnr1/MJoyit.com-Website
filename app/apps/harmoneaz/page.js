@@ -1,4 +1,5 @@
-import PhoneShowcase from "../../components/PhoneShowcase";
+import PhoneShowcase from "../../../components/PhoneShowcase";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 export const metadata = {
   title: "Harmoneaz — de eerste app van MJoy-IT",
@@ -10,7 +11,7 @@ export const metadata = {
     "app achter Harmoneaz",
     "co-ouderschap app Nederland",
   ],
-  alternates: { canonical: "/product" },
+  alternates: { canonical: "/apps/harmoneaz" },
 };
 
 const features = [
@@ -92,6 +93,13 @@ const softwareAppJsonLd = {
 export default function Product() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-20">
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Apps", href: "/apps" },
+          { name: "Harmoneaz" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}

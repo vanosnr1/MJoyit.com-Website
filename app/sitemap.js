@@ -2,7 +2,8 @@
 const lastModified = {
   "": "2026-08-10",
   "/over-ons": "2026-08-10",
-  "/product": "2026-08-10",
+  "/apps": "2026-08-10",
+  "/apps/harmoneaz": "2026-08-10",
   "/contact": "2026-08-10",
 };
 

@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 const links = [
   { href: "/", label: "Home" },
   { href: "/over-ons", label: "Over ons" },
-  { href: "/product", label: "Product" },
+  { href: "/apps", label: "Apps" },
   { href: "/contact", label: "Contact" },
 ];
 
