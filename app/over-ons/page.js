@@ -49,6 +49,20 @@ export default function OverOns() {
           daar iets aan bouwen dat écht helpt.
         </p>
         <p>
+          Daarna volgde{" "}
+          <a
+            href="https://domeaz.app/?utm_source=mjoyit&utm_medium=referral&utm_campaign=launch"
+            target="_blank"
+            rel="noopener"
+            className="focus-ring text-current hover:underline"
+          >
+            Domeaz, de app voor je huisdossier
+          </a>
+          : alles van je huis op één plek, van de garantie van de wasmachine
+          tot de opzegtermijn van het energiecontract en het jaarlijkse
+          onderhoud van de cv-ketel.
+        </p>
+        <p>
           Bedankt dat je langskomt en vanaf het begin deel uitmaakt van ons
           verhaal.
         </p>

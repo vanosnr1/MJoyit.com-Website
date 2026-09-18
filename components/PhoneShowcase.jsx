@@ -2,7 +2,26 @@
 
 import { useEffect, useState } from "react";
 
-export default function PhoneShowcase() {
+// Standaard toont de showcase Harmoneaz; andere app-pagina's geven eigen schermen mee.
+const defaultScreens = [
+  {
+    src: "/app-screens/dashboard.webp",
+    alt: "Harmoneaz — dashboard met taken",
+    label: "Dashboard",
+  },
+  {
+    src: "/app-screens/zorgschema.webp",
+    alt: "Harmoneaz — zorgschema kalender",
+    label: "Zorgschema",
+  },
+];
+
+export default function PhoneShowcase({
+  screens = defaultScreens,
+  hint = "scroll voor zorgschema",
+}) {
+  const [first, second] = screens;
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,8 +44,8 @@ export default function PhoneShowcase() {
           {/* dashboard: slides up and out when scrolled */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/app-screens/dashboard.webp"
-            alt="Harmoneaz — dashboard met taken"
+            src={first.src}
+            alt={first.alt}
             className="absolute inset-0 object-cover object-top transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]"
             style={{
               width: "100%",
@@ -38,8 +57,8 @@ export default function PhoneShowcase() {
           {/* zorgschema: slides up into view from below when scrolled */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/app-screens/zorgschema.webp"
-            alt="Harmoneaz — zorgschema kalender"
+            src={second.src}
+            alt={second.alt}
             className="absolute inset-0 object-cover object-top transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]"
             style={{
               width: "100%",
@@ -56,7 +75,7 @@ export default function PhoneShowcase() {
           >
             <div className="flex flex-col items-center gap-1 rounded-full bg-ink/70 px-3 py-1.5 backdrop-blur">
               <span className="font-mono text-[9px] uppercase tracking-widest text-fog">
-                scroll voor zorgschema
+                {hint}
               </span>
               <svg
                 width="12"
@@ -85,7 +104,7 @@ export default function PhoneShowcase() {
             !scrolled ? "bg-panel text-paper" : "text-fog hover:text-paper"
           }`}
         >
-          Dashboard
+          {first.label}
         </button>
         <button
           onClick={() => setScrolled(true)}
@@ -93,7 +112,7 @@ export default function PhoneShowcase() {
             scrolled ? "bg-panel text-paper" : "text-fog hover:text-paper"
           }`}
         >
-          Zorgschema
+          {second.label}
         </button>
       </div>
     </div>

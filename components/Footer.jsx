@@ -56,6 +56,16 @@ export default function Footer() {
                   Harmoneaz — co-ouderschap app voor Nederland
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://domeaz.app/?utm_source=mjoyit&utm_medium=referral&utm_campaign=launch"
+                  target="_blank"
+                  rel="noopener"
+                  className="focus-ring hover:text-current"
+                >
+                  Domeaz — alles van je huis op één plek
+                </a>
+              </li>
             </ul>
           </div>
 

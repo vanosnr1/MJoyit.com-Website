@@ -18,6 +18,15 @@ const apps = [
     external: "https://harmoneaz.com",
     status: "Live",
   },
+  {
+    name: "Domeaz",
+    tagline: "Alles van je huis op één plek",
+    description:
+      "Apparaten met garantie, contracten met opzegtermijn en onderhoud met herinneringen — samen met je huisgenoten. Gratis te beginnen, zonder advertenties of tracking.",
+    href: "/apps/domeaz",
+    external: "https://domeaz.app/?utm_source=mjoyit&utm_medium=referral&utm_campaign=launch",
+    status: "Live",
+  },
 ];
 
 export default function Apps() {

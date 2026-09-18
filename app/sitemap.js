@@ -1,9 +1,10 @@
 // Werk de datum van een pagina bij wanneer de inhoud écht wijzigt.
 const lastModified = {
-  "": "2026-08-10",
+  "": "2026-09-18",
   "/over-ons": "2026-08-10",
-  "/apps": "2026-08-10",
+  "/apps": "2026-09-18",
   "/apps/harmoneaz": "2026-08-10",
+  "/apps/domeaz": "2026-09-18",
   "/contact": "2026-08-10",
 };
 
