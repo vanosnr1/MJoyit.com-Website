@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact",
   description:
-    "Neem contact op met MJoy-IT uit Rotterdam. Vragen of feedback over onze apps, zoals de co-ouderschap app Harmoneaz? Mail ons.",
+    "Neem contact op met MJoy-IT uit Rotterdam. Vragen of feedback over onze apps, zoals de co-ouderschap app Harmoneaz of Domeaz, de app voor je huis? Mail ons.",
   alternates: { canonical: "/contact" },
 };
 

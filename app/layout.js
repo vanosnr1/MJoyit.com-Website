@@ -34,10 +34,11 @@ export const metadata = {
     template: "%s — MJoy-IT",
   },
   description:
-    "MJoy-IT uit Rotterdam bouwt apps die het dagelijks leven eenvoudiger maken. Onze eerste app: Harmoneaz, de co-ouderschap app voor Nederland.",
+    "MJoy-IT uit Rotterdam bouwt apps die het dagelijks leven eenvoudiger maken: Harmoneaz, de co-ouderschap app voor Nederland, en Domeaz, alles van je huis op één plek.",
   keywords: [
     "MJoy-IT",
     "Harmoneaz",
+    "Domeaz",
     "co-ouderschap app Nederland",
     "software Rotterdam",
     "app ontwikkeling Nederland",
@@ -48,7 +49,7 @@ export const metadata = {
   openGraph: {
     title: "MJoy-IT — Apps die het dagelijks leven eenvoudiger maken",
     description:
-      "MJoy-IT uit Rotterdam bouwt apps die het dagelijks leven eenvoudiger maken. Onze eerste app: Harmoneaz, de co-ouderschap app voor Nederland.",
+      "MJoy-IT uit Rotterdam bouwt apps die het dagelijks leven eenvoudiger maken: Harmoneaz, de co-ouderschap app voor Nederland, en Domeaz, alles van je huis op één plek.",
     url: "https://mjoyit.com",
     siteName: "MJoy-IT",
     locale: "nl_NL",
@@ -80,23 +81,44 @@ const organizationJsonLd = {
     addressCountry: "NL",
   },
   founders: [{ "@type": "Person", name: "Mandy" }, { "@type": "Person", name: "Jeroen" }],
-  brand: {
-    "@type": "Brand",
-    name: "Harmoneaz",
-    url: "https://harmoneaz.com",
-  },
-  owns: {
-    "@type": "SoftwareApplication",
-    "@id": "https://harmoneaz.com/#app",
-    name: "Harmoneaz",
-    url: "https://harmoneaz.com",
-    applicationCategory: "LifestyleApplication",
-    operatingSystem: "iOS, Android",
-    sameAs: [
-      "https://apps.apple.com/nl/app/harmoneaz/id6760933859",
-      "https://play.google.com/store/apps/details?id=com.harmoneaz.app",
-    ],
-  },
+  brand: [
+    {
+      "@type": "Brand",
+      name: "Harmoneaz",
+      url: "https://harmoneaz.com",
+    },
+    {
+      "@type": "Brand",
+      name: "Domeaz",
+      url: "https://domeaz.app",
+    },
+  ],
+  owns: [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://harmoneaz.com/#app",
+      name: "Harmoneaz",
+      url: "https://harmoneaz.com",
+      applicationCategory: "LifestyleApplication",
+      operatingSystem: "iOS, Android",
+      sameAs: [
+        "https://apps.apple.com/nl/app/harmoneaz/id6760933859",
+        "https://play.google.com/store/apps/details?id=com.harmoneaz.app",
+      ],
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://domeaz.app/#app",
+      name: "Domeaz",
+      url: "https://domeaz.app",
+      applicationCategory: "LifestyleApplication",
+      operatingSystem: "iOS, Android",
+      sameAs: [
+        "https://apps.apple.com/nl/app/domeaz/id6806525988",
+        "https://play.google.com/store/apps/details?id=com.domeaz.app",
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {

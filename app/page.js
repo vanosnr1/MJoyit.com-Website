@@ -17,14 +17,12 @@ export default function Home() {
           aanvoelen als een helpende hand — niet als een drempel.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="https://harmoneaz.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/apps"
             className="focus-ring rounded-md bg-signal px-6 py-3 font-mono text-sm font-medium text-ink transition-transform hover:scale-[1.02]"
           >
-            Ontdek onze eerste app: Harmoneaz →
-          </a>
+            Ontdek onze apps: Harmoneaz en Domeaz →
+          </Link>
           <Link
             href="/over-ons"
             className="focus-ring rounded-md border border-line px-6 py-3 font-mono text-sm font-medium text-paper transition-colors hover:border-signal"
@@ -38,7 +36,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lanceringsblok */}
+      {/* Lanceringsblok Domeaz */}
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="font-mono text-sm uppercase tracking-widest text-current">
+            Onze tweede app is live
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
+            Domeaz 🎉
+          </h2>
+
+          <div className="mt-6 grid gap-10 md:grid-cols-[1.2fr_1fr]">
+            <div className="space-y-4 text-fog">
+              <p>
+                Na Harmoneaz presenteren we met trots{" "}
+                <a
+                  href="https://domeaz.app/?utm_source=mjoyit&utm_medium=referral&utm_campaign=launch"
+                  target="_blank"
+                  rel="noopener"
+                  className="focus-ring text-paper underline underline-offset-4 hover:text-current"
+                >
+                  Domeaz, de app voor je huisdossier
+                </a>
+                . Welke cv-ketel hangt er, wanneer loopt de garantie van de
+                wasmachine af, en tot wanneer kun je dat energiecontract nog
+                opzeggen? Domeaz onthoudt het, en waarschuwt je op tijd.
+              </p>
+              <p>
+                Apparaten met garantie, contracten en vaste lasten,
+                onderhoud met herinneringen en de contacten die erbij horen —
+                op één plek, en gedeeld met je huisgenoten. Zonder
+                advertenties of tracking, met je gegevens in de EU.
+              </p>
+              <p>
+                De app is beschikbaar voor iPhone en Android, en gratis te
+                beginnen.
+              </p>
+              <Link
+                href="/apps/domeaz"
+                className="focus-ring mt-2 inline-block rounded-md border border-line px-5 py-2.5 font-mono text-sm text-paper hover:border-current"
+              >
+                Lees meer over Domeaz →
+              </Link>
+            </div>
+
+            <div className="rounded-lg border border-line bg-panel p-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-fog">
+                Domeaz
+              </p>
+              <p className="mt-2 font-display text-xl font-bold">
+                Alles van je huis op één plek
+              </p>
+              <p className="mt-2 text-sm text-fog">
+                Garanties, contracten, onderhoud en vaste lasten bijhouden,
+                samen met wie er woont. Gratis te beginnen.
+              </p>
+              <a
+                href="https://domeaz.app/?utm_source=mjoyit&utm_medium=referral&utm_campaign=launch"
+                target="_blank"
+                rel="noopener"
+                className="focus-ring mt-4 inline-block font-mono text-sm text-current hover:underline"
+              >
+                domeaz.app →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lanceringsblok Harmoneaz */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <p className="font-mono text-sm uppercase tracking-widest text-current">
