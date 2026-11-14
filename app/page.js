@@ -134,8 +134,14 @@ export default function Home() {
                 vullen we nu op.
               </p>
               <p>
-                De app is beschikbaar voor iPhone en Android, met 14 dagen
-                gratis proberen.
+                Sinds oktober 2026 is Harmoneaz compleet vernieuwd, met een
+                rustigere vormgeving en een nieuw onderdeel: Overleg, waarin
+                ouders per onderwerp bespreken wat er geregeld moet worden.
+              </p>
+              <p>
+                De app is beschikbaar voor iPhone, iPad en Android. Je groep
+                opzetten is gratis; daarna kiest elke ouder zelf voor Pro, met
+                14 dagen gratis proberen.
               </p>
               <Link
                 href="/apps/harmoneaz"
@@ -153,8 +159,8 @@ export default function Home() {
                 Co-ouderschap app voor Nederland
               </p>
               <p className="mt-2 text-sm text-fog">
-                Plan zorgschema&apos;s, agenda en alles rondom de kinderen op
-                één rustige plek. 14 dagen gratis proberen.
+                Zorgschema, agenda, wisseldagen, afspraken, kosten en overleg
+                op één rustige plek. Gratis je groep opzetten.
               </p>
               <a
                 href="https://harmoneaz.com"

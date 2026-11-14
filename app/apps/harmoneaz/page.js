@@ -16,49 +16,67 @@ export const metadata = {
 
 const features = [
   {
-    title: "Gedeeld zorgschema",
+    title: "Zorgschema en kalender",
     description:
-      "Eén heldere agenda voor de zorgregeling, zichtbaar en bewerkbaar voor beide ouders — geen losse appjes of verouderde schema's meer.",
+      "Zie per dag bij wie de kinderen zijn. Een ruil of vakantieweek leg je vast als tijdelijke afwijking; het vaste schema blijft eronder staan. Afspraken staan voor beide ouders tegelijk in de agenda.",
+  },
+  {
+    title: "Wisseldag zonder vergeten spullen",
+    description:
+      "Bij elke wisseldag staat klaar wat mee moet en wat de andere ouder moet weten: de inpaklijst en de dagnotities van de afgelopen dagen.",
   },
   {
     title: "Afspraken vastleggen",
     description:
-      "Leg afspraken uit het ouderschapsplan en losse bijzonderheden vast op één plek, zodat niets meer verloren gaat in chatgeschiedenis.",
+      "Zet de afspraken uit jullie ouderschapsplan of convenant in de app, zodat ze niet in een la verdwijnen.",
   },
   {
-    title: "Kosten verdelen en verklaren",
+    title: "Alimentatie met indexatie",
     description:
-      "Verdeel kosten zoals schoolkosten en medische kosten per post, met een duidelijke onderbouwing per bijdrage — geen welles-nietes meer over wie wat betaalt.",
+      "Houd de alimentatie bij; voor Nederland past de app de jaarlijkse wettelijke indexatie toe, zodat het bedrag actueel en onderbouwd is.",
   },
   {
-    title: "Alimentatie met automatische indexatie",
+    title: "Kosten en kinderrekening",
     description:
-      "Houd het alimentatiebedrag bij én laat de jaarlijkse wettelijke indexatie automatisch doorrekenen, zodat het bedrag altijd actueel en onderbouwd is.",
+      "Begin een uitgave met een foto van het bonnetje: de app vult bedrag, datum en winkel alvast in. Harmoneaz houdt bij hoe de kosten verdeeld zijn en wat er nog verrekend moet worden.",
   },
   {
-    title: "Inpaklijst per wissel",
+    title: "Overleg per onderwerp",
     description:
-      "Stel een vaste inpaklijst samen voor elke wissel, met ruimte om eenmalige items toe te voegen — zoals spullen voor een schoolreisje of logeerpartijtje.",
+      "School, vakantie, de nieuwe fiets: elk onderwerp krijgt een eigen gesprek. Verzonden berichten blijven staan, zodat het voor beide ouders een betrouwbaar overzicht is.",
   },
   {
-    title: "Taken en checklists",
+    title: "Taken",
     description:
       "Verdeel taken met een datum en verantwoordelijke ouder, zodat duidelijk is wie waarvoor zorgt — van een ouderavond tot nieuwe schoenen.",
   },
   {
-    title: "Dagnotities",
+    title: "Ook voor de kinderen",
     description:
-      "Leg bijzonderheden over de kinderen vast en deel ze met de andere ouder, met vermelding van wie de notitie plaatste.",
+      "Kinderen kunnen met een eigen account meekijken. Ouders bepalen wat ze zien en wat ze mogen doen.",
   },
   {
-    title: "Snel inzicht",
+    title: "Voor scheidingsspecialisten",
     description:
-      "Zie in één oogopslag wat er vandaag en deze week speelt rond de kinderen, zonder te hoeven zoeken.",
+      "Mediators en andere specialisten lezen het ouderschapsplan in en zetten het gezin samen met de ouders klaar in het specialistenportaal.",
+  },
+];
+
+const screens = [
+  {
+    src: "/app-screens/harmoneaz-afspraken.webp",
+    alt: "Harmoneaz — vastgelegde afspraken en alimentatie",
+    label: "Afspraken",
   },
   {
-    title: "Minder mentale belasting",
-    description:
-      "Alles staat vast op één rustige plek, zodat co-ouderschap minder denkwerk en minder stress kost.",
+    src: "/app-screens/harmoneaz-kosten.webp",
+    alt: "Harmoneaz — het kostenoverzicht met uitgaven en de stand tussen beide ouders",
+    label: "Kosten",
+  },
+  {
+    src: "/app-screens/harmoneaz-overleg-gesprek.webp",
+    alt: "Harmoneaz — een gesprek in Overleg over het onderwerp School",
+    label: "Overleg",
   },
 ];
 
@@ -68,7 +86,7 @@ const softwareAppJsonLd = {
   "@id": "https://harmoneaz.com/#app",
   name: "Harmoneaz",
   applicationCategory: "LifestyleApplication",
-  operatingSystem: "iOS, Android",
+  operatingSystem: "iOS, iPadOS, Android",
   description:
     "Co-ouderschap app voor Nederland: plan zorgschema's, agenda's en afspraken rondom de kinderen op één rustige plek.",
   url: "https://harmoneaz.com",
@@ -80,7 +98,7 @@ const softwareAppJsonLd = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "EUR",
-    description: "14 dagen gratis proberen",
+    description: "Gratis je groep opzetten; daarna Pro per ouder, eerst 14 dagen gratis",
   },
   publisher: {
     "@type": "Organization",
@@ -178,18 +196,16 @@ export default function Product() {
           ))}
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-lg border border-line bg-panel">
-          <div className="border-b border-line px-5 py-3">
-            <p className="font-mono text-xs uppercase tracking-widest text-fog">
-              In de app — alimentatie met automatische indexatie
-            </p>
-          </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/app-screens/alimentatie-indexatie.webp"
-            alt="Harmoneaz — ouderafspraken met kinderalimentatie en automatische jaarlijkse indexatie"
-            className="w-full"
-          />
+        <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          {screens.map((sc) => (
+            <figure key={sc.src} className="overflow-hidden rounded-lg border border-line bg-panel">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={sc.src} alt={sc.alt} className="w-full" loading="lazy" />
+              <figcaption className="border-t border-line px-4 py-3 font-mono text-xs uppercase tracking-widest text-fog">
+                {sc.label}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
 
@@ -235,10 +251,12 @@ export default function Product() {
           Beschikbaarheid
         </p>
         <p className="mt-2 font-display text-xl font-bold">
-          Live voor iPhone en Android
+          Live voor iPhone, iPad en Android
         </p>
         <p className="mt-2 text-sm text-fog">
-          Probeer Harmoneaz 14 dagen gratis.
+          Je groep opzetten en de andere ouder uitnodigen is gratis. Daarna
+          kiest elke ouder zelf voor Pro (€ 3,99 per maand of € 34,99 per
+          jaar), eerst 14 dagen gratis.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a

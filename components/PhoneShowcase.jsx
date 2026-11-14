@@ -5,20 +5,20 @@ import { useEffect, useState } from "react";
 // Standaard toont de showcase Harmoneaz; andere app-pagina's geven eigen schermen mee.
 const defaultScreens = [
   {
-    src: "/app-screens/dashboard.webp",
-    alt: "Harmoneaz — dashboard met taken",
-    label: "Dashboard",
+    src: "/app-screens/harmoneaz-home.webp",
+    alt: "Harmoneaz — Home: bij wie de kinderen zijn, de agenda en openstaande taken",
+    label: "Home",
   },
   {
-    src: "/app-screens/zorgschema.webp",
-    alt: "Harmoneaz — zorgschema kalender",
-    label: "Zorgschema",
+    src: "/app-screens/harmoneaz-overdracht.webp",
+    alt: "Harmoneaz — de wisseldag met inpaklijst en dagnotities",
+    label: "Wisseldag",
   },
 ];
 
 export default function PhoneShowcase({
   screens = defaultScreens,
-  hint = "scroll voor zorgschema",
+  hint = "scroll voor wisseldag",
 }) {
   const [first, second] = screens;
 
