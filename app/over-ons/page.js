@@ -56,7 +56,7 @@ export default function OverOns() {
             rel="noopener"
             className="focus-ring text-current hover:underline"
           >
-            Domeaz, de app voor je huisdossier
+            Domeaz, je digitale woningdossier
           </a>
           : alles van je huis op één plek, van de garantie van de wasmachine
           tot de opzegtermijn van het energiecontract en het jaarlijkse

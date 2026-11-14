@@ -4,12 +4,13 @@ import Breadcrumbs from "../../../components/Breadcrumbs";
 export const metadata = {
   title: "Domeaz — de tweede app van MJoy-IT",
   description:
-    "Ontdek Domeaz, de tweede app van MJoy-IT: alles van je huis op één plek. Apparaten met garantie, contracten met opzegtermijn en onderhoud met herinneringen. Gratis te beginnen via domeaz.app.",
+    "Ontdek Domeaz, de tweede app van MJoy-IT: je digitale woningdossier. Apparaten met garantie, contracten, onderhoud met herinneringen, tuin en garage. In het Nederlands, Engels en Duits.",
   keywords: [
     "Domeaz",
     "MJoy-IT apps",
     "app voor je huis",
     "huisdossier app",
+    "digitaal woningdossier",
     "garantie en onderhoud bijhouden",
   ],
   alternates: { canonical: "/apps/domeaz" },
@@ -66,6 +67,26 @@ const features = [
       "Nodig je huisgenoten uit met een code. Iedereen ziet hetzelfde huis, dezelfde apparaten en dezelfde afspraken.",
   },
   {
+    title: "Tuin en planten",
+    description:
+      "Je planten in een getekende tuin, met een verzorgingsvoorstel vanaf een foto en een seintje als ze water nodig hebben. Het weer en de regen tellen mee, en de plantendokter helpt als een plant niet lekker gaat.",
+  },
+  {
+    title: "Garage en voertuigen",
+    description:
+      "Auto, motor, fiets of e-bike met een onderhoudsplan op tijd en kilometers, en de APK-datum van de RDW met een herinnering.",
+  },
+  {
+    title: "Meterstanden",
+    description:
+      "Stroom, gas en water met de datum erbij, ook af te lezen van een foto. Handig bij de jaarafrekening en bij een verhuizing.",
+  },
+  {
+    title: "Huis overdragen",
+    description:
+      "Verkoop je het huis of verhuis je? Geef het woningdossier door aan de nieuwe bewoner met één code, of als huispaspoort in pdf. Jij kiest wat meegaat.",
+  },
+  {
     title: "Over dit huis",
     description:
       "De dingen die je altijd kwijt bent: bouwjaar, energielabel, de kleurcode van de muurverf, welke groep in de meterkast bij de zolder hoort.",
@@ -79,9 +100,9 @@ const mobileAppJsonLd = {
   name: "Domeaz",
   applicationCategory: "LifestyleApplication",
   operatingSystem: "iOS, Android",
-  inLanguage: ["nl", "en"],
+  inLanguage: ["nl", "en", "de"],
   description:
-    "Alles van je huis op één plek: apparaten met garantie, contracten en vaste lasten met opzegtermijn, onderhoud met herinneringen en contacten — gedeeld met je huisgenoten.",
+    "Je digitale woningdossier: apparaten met garantie, contracten en vaste lasten met opzegtermijn, onderhoud met herinneringen, tuin, garage en meterstanden — gedeeld met je huisgenoten.",
   url: "https://domeaz.app",
   sameAs: [APP_STORE_URL, PLAY_STORE_URL],
   offers: {
@@ -132,7 +153,7 @@ export default function Product() {
               href={DOMEAZ_URL}
               className="focus-ring rounded-sm font-medium text-signal underline underline-offset-4 hover:text-current"
             >
-              Domeaz, de app voor je huisdossier
+              Domeaz, je digitale woningdossier
             </a>
             .
           </p>
@@ -179,7 +200,7 @@ export default function Product() {
           helpt de zorg voor de kinderen te regelen, houdt Domeaz het huis
           zelf bij — voor huiseigenaren en huurders, voor gezinnen en
           stellen, en voor iedereen met een tweede woning. Gemaakt in
-          Nederland, in het Nederlands en het Engels. Lees meer op{" "}
+          Nederland, in het Nederlands, het Engels en het Duits. Lees meer op{" "}
           <a
             href={DOMEAZ_URL}
             className="focus-ring rounded-sm font-medium text-signal underline underline-offset-4 hover:text-current"
@@ -275,7 +296,7 @@ export default function Product() {
           Live voor iPhone en Android
         </p>
         <p className="mt-2 text-sm text-fog">
-          Gratis te beginnen, in het Nederlands en het Engels.
+          Gratis te beginnen, in het Nederlands, het Engels en het Duits.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a

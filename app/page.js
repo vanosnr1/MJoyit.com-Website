@@ -56,7 +56,7 @@ export default function Home() {
                   rel="noopener"
                   className="focus-ring text-paper underline underline-offset-4 hover:text-current"
                 >
-                  Domeaz, de app voor je huisdossier
+                  Domeaz, je digitale woningdossier
                 </a>
                 . Welke cv-ketel hangt er, wanneer loopt de garantie van de
                 wasmachine af, en tot wanneer kun je dat energiecontract nog
